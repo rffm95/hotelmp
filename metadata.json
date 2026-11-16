@@ -1,0 +1,6 @@
+{
+  "name": "Hotel Montepiedra · Manual de Bar",
+  "description": "Guia operacional para a equipa de bar do Hotel Montepiedra. Cocktails, Sangrias e Guia de Gins.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
