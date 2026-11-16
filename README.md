@@ -27,4 +27,6 @@ Endereço: https://rffm95.github.io/hotelmp/
 - Gins e garnish: `src/data/ginGarnish.ts`.
 - Fotografias: `public/images/menu/`, ligadas por id exato em `src/data/drinkImages.ts`.
   São ainda as fotografias da carta Cheers; substituir pelas do hotel mantendo os mesmos ids.
-- Marca: monograma e ícones em `public/icon.svg`, `public/icon-*.png`, cores em `src/index.css`.
+- Marca: cores do logótipo Dynastic Resorts (azul-marinho #2D4779 e laranja #ED5C1B).
+  Leque em vetor em `src/components/BrandFan.tsx` e `public/icon.svg`; logótipo completo em
+  `public/brand/` (versão normal e versão clara para o modo bar); tokens de cor em `src/index.css`.

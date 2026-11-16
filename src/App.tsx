@@ -75,7 +75,7 @@ export default function App() {
     document.documentElement.dataset.theme = theme;
     document
       .querySelector('meta[name="theme-color"]')
-      ?.setAttribute("content", isDarkMode ? "#0f0e0c" : "#f6f1e7");
+      ?.setAttribute("content", isDarkMode ? "#0b1120" : "#f4f6fa");
   }, [isDarkMode]);
 
   const toggleFavorite = (id: string) =>
@@ -374,6 +374,22 @@ export default function App() {
             <small>Hotel</small> Montepiedra
           </span>
           <p>{t.footer}</p>
+          <span className="footer-group">
+            <img
+              className="logo-on-light"
+              src={`${import.meta.env.BASE_URL}brand/dynastic-resorts.png`}
+              alt="Dynastic Resorts"
+              width={194}
+              height={56}
+            />
+            <img
+              className="logo-on-dark"
+              src={`${import.meta.env.BASE_URL}brand/dynastic-resorts-light.png`}
+              alt="Dynastic Resorts"
+              width={194}
+              height={56}
+            />
+          </span>
         </footer>
 
         {selectedRecipe && (

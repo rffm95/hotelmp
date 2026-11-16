@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useT, Lang } from "../i18n";
+import { BrandFan } from "./BrandFan";
 import { Moon, Search, Star, Sun, X } from "lucide-react";
 
 interface HeaderProps {
@@ -43,7 +44,7 @@ export default function Header(props: HeaderProps) {
           aria-label={t.brandHome}
         >
           <span className="brand-mark" aria-hidden="true">
-            MP
+            <BrandFan />
           </span>
           <span className="brand-text">
             <strong>Montepiedra</strong>

@@ -2,57 +2,59 @@
 
 /* ==========================================================================
    Hotel Montepiedra · Manual de bar
-   Direção: bar de hotel à noite. Fundo quase negro e quente, latão como
-   acento, serifa clássica para nomes e sem-serifa muito legível para medidas.
+   Direção: cores do grupo Dynastic Resorts (azul-marinho e laranja do logótipo).
+   Modo bar = azul-marinho profundo com laranja como acento; serifa clássica
+   para nomes e sem-serifa muito legível para medidas.
+   (Os tokens --brass* mantêm o nome do original, mas agora são o laranja.)
    O modo bar (escuro) é o padrão: não encandeia em sala com pouca luz.
    ========================================================================== */
 
 :root,
 :root[data-theme="dark"] {
-  --bg: #0f0e0c;
-  --bg-raised: #14130f;
-  --surface: #1a1814;
-  --surface-2: #23201b;
-  --surface-3: #2c2822;
-  --ink: #f3ede1;
-  --muted: #bdb3a0;
-  --faint: #948a77;
-  --line: #2f2b24;
-  --line-strong: #463f34;
-  --brass: #d6b273;
-  --brass-strong: #ecca8c;
-  --brass-soft: #d6b2731f;
-  --on-brass: #17130c;
-  --done: #9cc7a4;
-  --done-soft: #9cc7a41a;
-  --warn: #e7b56a;
-  --overlay: #050403d9;
+  --bg: #0b1120;
+  --bg-raised: #0e1527;
+  --surface: #131c31;
+  --surface-2: #1a2540;
+  --surface-3: #22304f;
+  --ink: #eef2f8;
+  --muted: #b0bacb;
+  --faint: #8c98ae;
+  --line: #223050;
+  --line-strong: #33446a;
+  --brass: #f3804a;
+  --brass-strong: #ff9d68;
+  --brass-soft: #f3804a1f;
+  --on-brass: #0b1120;
+  --done: #8fcfa6;
+  --done-soft: #8fcfa61a;
+  --warn: #f2b765;
+  --overlay: #04070fd9;
   --shadow: 0 1px 0 #ffffff08 inset, 0 18px 40px -18px #000c;
-  --placeholder: radial-gradient(120% 90% at 50% 0%, #2c2721 0%, #1a1814 70%);
+  --placeholder: radial-gradient(120% 90% at 50% 0%, #22304f 0%, #131c31 70%);
   color-scheme: dark;
 }
 
 :root[data-theme="light"] {
-  --bg: #f6f1e7;
-  --bg-raised: #fbf7ef;
-  --surface: #fffdf8;
-  --surface-2: #f1eadd;
-  --surface-3: #e8dfcf;
-  --ink: #1c1913;
-  --muted: #5a5243;
-  --faint: #776c5a;
-  --line: #e4dbca;
-  --line-strong: #d2c6b1;
-  --brass: #87621f;
-  --brass-strong: #6e4f17;
-  --brass-soft: #87621f14;
-  --on-brass: #fffdf8;
+  --bg: #f4f6fa;
+  --bg-raised: #f9fafc;
+  --surface: #ffffff;
+  --surface-2: #eaeef5;
+  --surface-3: #dde3ee;
+  --ink: #13203d;
+  --muted: #45516b;
+  --faint: #5c6880;
+  --line: #dfe4ee;
+  --line-strong: #c6cedd;
+  --brass: #b8461a;
+  --brass-strong: #983913;
+  --brass-soft: #ed5c1b14;
+  --on-brass: #ffffff;
   --done: #2f6b40;
   --done-soft: #2f6b4012;
   --warn: #8a5a12;
-  --overlay: #1c1913b3;
-  --shadow: 0 1px 2px #1c19130a, 0 14px 34px -20px #1c191340;
-  --placeholder: radial-gradient(120% 90% at 50% 0%, #efe6d6 0%, #e6dccb 75%);
+  --overlay: #13203db3;
+  --shadow: 0 1px 2px #13203d0a, 0 14px 34px -20px #13203d40;
+  --placeholder: radial-gradient(120% 90% at 50% 0%, #e6ebf3 0%, #dde3ee 75%);
   color-scheme: light;
 }
 
@@ -185,14 +187,15 @@ svg {
 .brand-mark {
   width: 44px;
   height: 44px;
-  border-radius: 50%;
-  border: 1px solid var(--brass);
-  color: var(--brass);
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 0 0 1px var(--line);
   display: grid;
   place-items: center;
-  font: 600 17px/1 var(--serif);
-  letter-spacing: 0.06em;
-  padding-left: 0.06em;
+}
+.brand-mark svg {
+  width: 30px;
+  height: auto;
 }
 .brand-text strong {
   display: block;
@@ -432,7 +435,7 @@ svg {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 40%, #0a0907e6);
+  background: linear-gradient(180deg, transparent 40%, #070c18e6);
 }
 .feature-caption {
   position: absolute;
@@ -443,7 +446,7 @@ svg {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  color: #f6efe2;
+  color: #f4f6fa;
 }
 .feature-caption small {
   display: block;
@@ -452,7 +455,7 @@ svg {
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #e6c995;
+  color: #ffa36f;
 }
 .feature-caption strong {
   font: 600 30px/1.05 var(--serif);
@@ -630,8 +633,8 @@ svg {
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.04em;
-  background: #0f0e0cb3;
-  color: #f3ede1;
+  background: #0b1120b3;
+  color: #eef2f8;
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
 }
@@ -795,8 +798,8 @@ svg {
   border-radius: 50%;
   display: grid;
   place-items: center;
-  background: #0f0e0ca6;
-  color: #f3ede1;
+  background: #0b1120a6;
+  color: #eef2f8;
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   transition:
@@ -808,7 +811,7 @@ svg {
   transform: scale(0.92);
 }
 .fav-button.is-active {
-  color: #ecca8c;
+  color: #ffa36f;
 }
 
 /* Lista rápida */
@@ -1095,6 +1098,19 @@ svg {
   vertical-align: middle;
   margin-right: 4px;
 }
+.footer-group {
+  display: inline-flex;
+  margin-left: auto;
+}
+.footer-group img {
+  display: block;
+  width: 150px;
+  height: auto;
+}
+:root[data-theme="dark"] .logo-on-light,
+:root[data-theme="light"] .logo-on-dark {
+  display: none;
+}
 .site-footer p {
   margin: 0;
   font: italic 500 19px var(--serif);
@@ -1182,14 +1198,14 @@ svg {
   border-radius: 50%;
   display: grid;
   place-items: center;
-  background: #0f0e0cb8;
-  color: #f3ede1;
+  background: #0b1120b8;
+  color: #eef2f8;
   border: 1px solid #ffffff1f;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 .glass-button.is-active {
-  color: #ecca8c;
+  color: #ffa36f;
 }
 .sheet-scroll {
   height: 100%;
@@ -1213,7 +1229,7 @@ svg {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(90deg, transparent 70%, #0f0e0c40);
+  background: linear-gradient(90deg, transparent 70%, #0b112040);
 }
 .sheet-image .drink-initials {
   font-size: 72px;
@@ -1510,7 +1526,7 @@ svg {
   .sheet-image::after {
     background: linear-gradient(
       180deg,
-      #0f0e0c66 0%,
+      #0b112066 0%,
       transparent 30%,
       transparent 60%,
       var(--bg) 100%
@@ -1559,7 +1575,9 @@ svg {
   .brand-mark {
     width: 38px;
     height: 38px;
-    font-size: 15px;
+  }
+  .brand-mark svg {
+    width: 26px;
   }
   .brand-text strong {
     font-size: 24px;
@@ -1712,14 +1730,28 @@ svg {
     flex-direction: column;
     align-items: flex-start;
   }
+  .footer-group {
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 400px) {
   .brand-text small {
     display: none;
   }
+  .brand {
+    gap: 9px;
+  }
   .brand-mark {
-    display: none;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+  }
+  .brand-mark svg {
+    width: 23px;
+  }
+  .brand-text strong {
+    font-size: 22px;
   }
 }
 
